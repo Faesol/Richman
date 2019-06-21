@@ -152,11 +152,11 @@ class HomeControllerPengajar extends Controller
         return view('tutor/form_buat_topik', ['data2' => $data2]);
     }
 
-    public function post_buat_topik(Request $request)
+    public function post_buat_topik(Request $request, $id)
     {
         $idUser= Auth::user()->id;
         $input = $request->all();
-        dd($input);
+        //dd($input);
         $this->validate($request, [
             'judul_topik' => 'required',
             'file_video' => 'required',
@@ -178,7 +178,7 @@ class HomeControllerPengajar extends Controller
         $input->deskripsi       = $request->get('deskripsi');
         $input->id_user         = $idUser;
         $input->id_kelas        = $request->get('id');
-        dd($input);
+        //dd($input);
         $input->save();
         return redirect()->action('HomeControllerPengajar@get_detail_kelas', ['id' => $id]);
     }
