@@ -79,19 +79,20 @@
                 <div class="container">
                     <h3 class="type--bold">Kelas Terbaru</h3>
                     <div class="row">
+                        @foreach($data as $data)
                         <div class="col-md-3">
                             <div class="feature feature-1">
                                 <a href="">
-                                    <img alt="Image" src="{{asset('asset_home/img/blog-1.jpg')}}">
+                                    <img alt="Image" src="{{ URL('/images/'.$data->file_foto) }}">
                                 </a>
                                 <div class="feature__body boxed boxed--border p-3">
                                     <a href="">
-                                        <h5>Java Tutorial for Complete Beginners</h5>
+                                        <h5>{{$data->nama_kelas}}</h5>
                                     </a>
                                     <p>
-                                        John Purcell
+                                        {{$data->diskripsi}}
                                     </p>
-                                    <a href="#" class="btn btn--sm btn--primary mt-2 p-1 pl-3 pr-3">
+                                    <a href="/pelajar/detail-kelas/{{$data->IDurl_slug}}" class="btn btn--sm btn--primary mt-2 p-1 pl-3 pr-3">
                                         <span class="btn__text">
                                             Beli Sekarang
                                         </span>
@@ -100,135 +101,7 @@
                             </div>
                             <!--end feature-->
                         </div>
-                        <div class="col-md-3">
-                            <div class="feature feature-1">
-                                <a href="">
-                                    <img alt="Image" src="{{asset('asset_home/img/inner-5.jpg')}}">
-                                </a>
-                                <div class="feature__body boxed boxed--border p-3">
-                                    <a href="">
-                                        <h5>Modern Aesthetic</h5>
-                                    </a>
-                                    <p>
-                                        A highly adaptable look thats simple
-                                    </p>
-                                    <a href="#" class="btn btn--sm btn--primary mt-2 p-1 pl-3 pr-3">
-                                        <span class="btn__text">
-                                            Beli Sekarang
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--end feature-->
-                        </div>
-                        <div class="col-md-3">
-                            <div class="feature feature-1">
-                                <a href="">
-                                    <span class="label bg--primary">Best Seller</span>
-                                </a>
-                                <img alt="Image" src="{{asset('asset_home/img/inner-4.jpg')}}">
-                                <div class="feature__body boxed boxed--border p-3">
-                                    <a href="">
-                                        <h5>Beautiful markup</h5>
-                                    </a>
-                                    <p>
-                                        Following BEM conventions for readability
-                                    </p>
-                                    <a href="#" class="btn btn--sm btn--primary mt-2 p-1 pl-3 pr-3">
-                                        <span class="btn__text">
-                                            Beli Sekarang
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--end feature-->
-                        </div>
-                        <div class="col-md-3">
-                            <div class="feature feature-1">
-                                <a href="">
-                                    <span class="label bg--primary">Best Seller</span>
-                                </a>
-                                <img alt="Image" src="{{asset('asset_home/img/inner-4.jpg')}}">
-                                <div class="feature__body boxed boxed--border p-3">
-                                    <a href="">
-                                        <h5>Membuat Aplikasi Android dengan React Native dan Expo</h5>
-                                    </a>
-                                    <p>
-                                        Following BEM conventions for readability
-                                    </p>
-                                    <a href="#" class="btn btn--sm btn--primary mt-2 p-1 pl-3 pr-3">
-                                        <span class="btn__text">
-                                            Beli Sekarang
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--end feature-->
-                        </div>
-                        <div class="col-md-3">
-                            <div class="feature feature-1">
-                                <a href="">
-                                    <img alt="Image" src="{{asset('asset_home/img/blog-1.jpg')}}">
-                                </a>
-                                <div class="feature__body boxed boxed--border p-3">
-                                    <a href="">
-                                        <h5>Java Tutorial for Complete Beginners</h5>
-                                    </a>
-                                    <p>
-                                        John Purcell
-                                    </p>
-                                    <a href="#" class="btn btn--sm btn--primary mt-2 p-1 pl-3 pr-3">
-                                        <span class="btn__text">
-                                            Beli Sekarang
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--end feature-->
-                        </div>
-                        <div class="col-md-3">
-                            <div class="feature feature-1">
-                                <a href="">
-                                    <img alt="Image" src="{{asset('asset_home/img/inner-5.jpg')}}">
-                                </a>
-                                <div class="feature__body boxed boxed--border p-3">
-                                    <a href="">
-                                        <h5>Modern Aesthetic</h5>
-                                    </a>
-                                    <p>
-                                        A highly adaptable look thats simple
-                                    </p>
-                                    <a href="#" class="btn btn--sm btn--primary mt-2 p-1 pl-3 pr-3">
-                                        <span class="btn__text">
-                                            Beli Sekarang
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--end feature-->
-                        </div>
-                        <div class="col-md-3">
-                            <div class="feature feature-1">
-                                <a href="">
-                                    <span class="label bg--primary">Best Seller</span>
-                                </a>
-                                <img alt="Image" src="{{asset('asset_home/img/inner-4.jpg')}}">
-                                <div class="feature__body boxed boxed--border p-3">
-                                    <a href="">
-                                        <h5>Beautiful markup</h5>
-                                    </a>
-                                    <p>
-                                        Following BEM conventions for readability
-                                    </p>
-                                    <a href="#" class="btn btn--sm btn--primary mt-2 p-1 pl-3 pr-3">
-                                        <span class="btn__text">
-                                            Beli Sekarang
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                            <!--end feature-->
-                        </div>
+                        @endforeach
                     </div>
                     <!--end of row-->
                 </div>

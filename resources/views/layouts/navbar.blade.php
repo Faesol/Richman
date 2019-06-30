@@ -87,7 +87,7 @@
                                     </li>
                                     @elseif (Auth::user()->role === "customer") 
                                     <li class="mr-5">
-                                        <a href="/"><span  class="type--uppercase">Home</span></a>  
+                                        <a href="/pelajar"><span  class="type--uppercase">Home</span></a>  
                                     </li>
                                     <li class="dropdown dropdown--hover">
                                         <span class="dropdown__trigger type--uppercase">Kategori Kelas</span>
@@ -99,12 +99,12 @@
                                                             <div class="col-lg-12">
                                                                 <ul class="menu-vertical">
                                                                     <li>
-                                                                        <a href="kategori-kelas-pemrograman">
+                                                                        <a href="/pelajar/kategori-kelas-pemrograman">
                                                                             <h6 class="type--uppercase">Kelas Pemrograman</h6>
                                                                         </a>
                                                                     </li>
                                                                     <li>
-                                                                        <a href="kategori-kelas-multimedia">
+                                                                        <a href="#">
                                                                             <h6 class="type--uppercase">Kelas Multimedia</h6>
                                                                         </a>
                                                                     </li>
@@ -121,16 +121,16 @@
                                         <!--end dropdown container-->
                                     </li>
                                     <li class="mr-5">
-                                        <a href="/"><span  class="type--uppercase">Kelas Saya</span></a>  
+                                        <a href="#"><span  class="type--uppercase">Kelas Saya</span></a>  
                                     </li>
                                     <li class="mr-5">
-                                        <a href="/"><span  class="type--uppercase">Keranjang</span></a>  
+                                        <a href="#"><span  class="type--uppercase">Keranjang</span></a>  
                                     </li>
                                     <li class="mr-5">
-                                        <a href="/"><span  class="type--uppercase">Transaksi</span></a>  
+                                        <a href="#"><span  class="type--uppercase">Transaksi</span></a>  
                                     </li>
                                     <li class="mr-5">
-                                        <a href="/"><span  class="type--uppercase">Dapatkan Kelas Gratis!</span></a>  
+                                        <a href="#"><span  class="type--uppercase">Dapatkan Kelas Gratis!</span></a>  
                                     </li>
                                     @elseif (Auth::user()->role === "admin")
                                         {{ 'navbar admin' }} 
@@ -193,12 +193,72 @@
                 </div>
                 <!--end of container-->
             </nav>
-        </div>
+        
 
         <main class="py-4">
             @yield('content')
         </main>
+        
+         <!-- Start Footer -->
+        <footer class="footer-3 text-center-xs space--xs ">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img alt="Image" class="logo" src="{{asset ('asset_home/img/logo-dark.png')}}" />
+                        <ul class="list-inline list--hover">
 
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <span class="type--fine-print">help@stack.io</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 text-right text-center-xs">
+                        <ul class="social-list list-inline list--hover">
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="socicon socicon-google icon icon--xs"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="socicon socicon-twitter icon icon--xs"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="socicon socicon-facebook icon icon--xs"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="#">
+                                    <i class="socicon socicon-instagram icon icon--xs"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!--end of row-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <p class="type--fine-print">
+                            Supercharge your web workflow
+                        </p>
+                    </div>
+                    <div class="col-md-6 text-right text-center-xs">
+                        <span class="type--fine-print">&copy;
+                            <span class="update-year"></span> Stack Inc.</span>
+                        <a class="type--fine-print" href="#">Privacy Policy</a>
+                        <a class="type--fine-print" href="#">Legal</a>
+                    </div>
+                </div>
+                <!--end of row-->
+            </div>
+            <!--end of container-->
+        </footer>
+
+        </div>
         <script src="{{asset ('asset_home/js/jquery-3.1.1.min.js')}}"></script>
         <script src="{{asset ('asset_home/js/flickity.min.js')}}"></script>
         <script src="{{asset ('asset_home/js/easypiechart.min.js')}}"></script>

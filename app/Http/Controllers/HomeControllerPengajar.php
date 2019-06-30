@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 use App\User;
 use Session;
 use App\Kelas_pengajar;
@@ -59,6 +60,7 @@ class HomeControllerPengajar extends Controller
          }
         $data                   = new Kelas_pengajar;
         $data->nama_kelas       = $request->get('nama_kelas');
+        $data->IDurl_slug        = Str::slug($request->get('nama_kelas'));
         $data->harga_kelas      = $request->get('harga_kelas');
         $data->diskon_harga     = $request->get('diskon_harga');
         $data->kategori_kelas   = $request->get('kategori_kelas');
@@ -96,15 +98,6 @@ class HomeControllerPengajar extends Controller
         
         $input = $request->all();
         //dd($input);
-        // $this->validate($request, [
-        //     'nama_kelas' => 'required',
-        //     'harga_kelas' => 'required',
-        //     'diskon_harga' => 'required',
-        //     'kategori_kelas' => 'required',
-        //     'file_foto' => 'required',
-        //     'file_video' => 'required',
-        //     'diskripsi' => 'required',
-        // ]);
         if($request->hasfile('file_foto') && $request->hasfile('file_video')){
             $foto = $request->file('file_foto');
             $video = $request->file('file_video');
