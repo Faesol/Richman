@@ -28,7 +28,7 @@ class HomeControllerPelajar extends Controller
     public function index()
     {
         $data = Kelas_pengajar::get();
-        return view('/home',['data' => $data]);
+        return view('/pelajar/home',['data' => $data]);
     }
     public function KtkelasP()
     {
