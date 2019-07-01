@@ -22,38 +22,38 @@
 </head>
 <body>
     @section('content')
-    <section class="main-container">
-            <div class="container">
-                <section class="text-center height-30 mb-5">
-                    <div class="container pos-vertical-center">
-                        <div class="row">
-                            <div class="col-md-8">
-                                <h2>{{$data->nama_kelas}}</h2>
-                                <p class="lead m-0 p-0" style="font-size: 30px">
-                                    <i class="material-icons color--primary m-0">star</i>
-                                    <i class="material-icons color--primary m-0">star</i>
-                                    <i class="material-icons color--primary m-0">star</i>
-                                    <i class="material-icons color--primary m-0">star</i>
-                                    <i class="material-icons color--primary m-0">star</i>
-                                </p>
-                                <p class="lead">
-                                    <strong>8328</strong> Murid Sudah Bergabung 
-                                </p>
-                            </div>
+    <section class="main-container pt-0">
+            <section class="text-center height-30 mb-0 bg--secondary">
+                <div class="container pos-vertical-center">
+                    <div class="row">
+                        <div class="col-md-8">
+                            <h2>{{$data->nama_kelas}}</h2>
+                            <p class="lead m-0 p-0" style="font-size: 30px">
+                                <i class="material-icons color--primary m-0">star</i>
+                                <i class="material-icons color--primary m-0">star</i>
+                                <i class="material-icons color--primary m-0">star</i>
+                                <i class="material-icons color--primary m-0">star</i>
+                                <i class="material-icons color--primary m-0">star</i>
+                            </p>
+                            <p class="lead">
+                                <strong>8328</strong> Murid Sudah Bergabung 
+                            </p>
                         </div>
-                        <!--end of row-->
                     </div>
-                    <!--end of container-->
-                </section>
-                <section class="switchable feature-large">
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </section>
+            <div class="container">                
+                <section class="switchable feature-large pt-0">
                 <div class="container">
                     <div class="row justify-content-around">
-                        <div class="col-md-4">
+                        <div class="col-md-4 pt-5">
                             <img alt="Image" class="border--round box-shadow-wide" src="{{ URL('/images/'.$data->file_foto) }}">
                         </div>
                         <div class="col-md-8 col-lg-8">
                             <div class="mt--1">
-                                <h4>Deskripsi Kelas (WYSIWYG)</h4>
+                                <h3>Deskripsi Kelas (WYSIWYG)</h3>
                                 <p>
                                     {{$data->diskripsi}}
                                 </p>
