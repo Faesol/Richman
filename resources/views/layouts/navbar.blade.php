@@ -195,12 +195,12 @@
             </nav>
         
 
-        <main class="py-0 pt-4">
+        <main class="py-4">
             @yield('content')
         </main>
         
          <!-- Start Footer -->
-        <footer class="footer-3 text-center-xs space--xs bg--secondary">
+        <footer class="footer-3 text-center-xs space--xs ">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
