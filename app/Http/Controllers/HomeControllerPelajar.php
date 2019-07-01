@@ -36,7 +36,7 @@ class HomeControllerPelajar extends Controller
         dd($data);
         return view('pelajar/kategorikelas',['data' => $data]);
     }
-    public function DtlKelas($slug)
+    public function DtKelas($slug)
     {
         $data = Kelas_pengajar::where('IDurl_slug',$slug)->first();
         $hasil_diskon = DB::table('hasil_diskon')->where('IDurl_slug',  $slug)->get();
