@@ -22,7 +22,74 @@
 </head>
 <body>
 @section('content')
-    <h1>CHECK OUT</h1>    
+<div class="container mb-5">
+        <section>
+            <div class="row">
+                <div class="col-12 col-md-8 mx-auto">
+                    <h3>Checkout Pendaftaran Kelas</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis quidem minus vitae itaque temporibus accusamus quo iste vero?.</p>
+                    <h4>Pilih Metode Pembayaran :</h4>
+                    <form action="">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="input-radio input-radio--innerlabel w-100">
+                                    <input id="radio-1" type="radio" name="radio_2" value="radio4">
+                                    <label for="radio-1" class="py-3 w-100" style="height: auto;"><h5 class="mb-0">BANK TRANSFER</h5></label>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="input-radio input-radio--innerlabel w-100">
+                                    <input id="radio-2" type="radio" name="radio_2" value="radio4">
+                                    <label for="radio-2" class="py-3 w-100" style="height: auto;"><h5 class="mb-0">OVO</h5></label>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <div class="input-radio input-radio--innerlabel w-100">
+                                    <input id="radio-3" type="radio" name="radio_2" value="radio4">
+                                    <label for="radio-3" class="py-3 w-100" style="height: auto;"><h5 class="mb-0">DANA</h5></label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 col-md-3 mr-auto">
+                                <button type="submit" class="btn btn--lg btn--primary py-2" style="height:auto;"><span class="btn__text">Bayar Sekarang!</span></button>
+                            </div>
+                        </div>
+                    </form>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-md-8 mx-auto">
+                    <div class="boxed boxed--border cart-total bg--secondary mt-0">
+                        <div class="row">
+                            <div class="col-12">
+                                <h4>Detail Checkout</h4>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <span class="h4 mb-0">Kelas:</span>
+                            </div>
+                            <div class="col-8 text-right">
+                                <span class="h4 mb-0"><strong>Belajar HTML</strong></span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-4">
+                                <span class="h4 mb-0">Total:</span>
+                            </div>
+                            <div class="col-8 text-right">
+                                <span class="h4 mb-0"><strong>Rp. 1,028.98</strong></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </div>      
 @endsection
     <script src="{{asset ('asset_home/js/jquery-3.1.1.min.js')}}"></script>
     <script src="{{asset ('asset_home/js/flickity.min.js')}}"></script>
