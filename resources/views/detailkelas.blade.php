@@ -1,4 +1,4 @@
-@extends('layouts.navbar')
+@extends('layouts.navbarhome')
 <!DOCTYPE html>
 <html lang="en">
 <head>

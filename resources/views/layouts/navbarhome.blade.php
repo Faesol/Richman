@@ -44,7 +44,7 @@
                         <div class="col-lg-9 order-lg-1">
                             <div class="bar__module">
                                 <ul class="menu-horizontal text-left">
-                                    @if ( Auth::user()->role  === "agent")
+                                    {{--  @if ( Auth::user()->role  === "agent")  --}}
                                         <li class="mr-5">
                                         <a href="/"><span  class="type--uppercase">Home</span></a>  
                                     </li>
@@ -58,12 +58,12 @@
                                                             <div class="col-lg-12">
                                                                 <ul class="menu-vertical">
                                                                     <li>
-                                                                        <a href="kategori.html">
+                                                                        <a href="/programming">
                                                                             <h6 class="type--uppercase">Kelas Pemrograman</h6>
                                                                         </a>
                                                                     </li>
                                                                     <li>
-                                                                        <a href="kategori.html">
+                                                                        <a href="/multimedia">
                                                                             <h6 class="type--uppercase">Kelas Multimedia</h6>
                                                                         </a>
                                                                     </li>
@@ -78,65 +78,7 @@
                                             </div>
                                         </div>
                                         <!--end dropdown container-->
-                                    </li>
-                                    <li class="mr-5">
-                                        <a href="/pengajar/kelola-kelas"><span  class="type--uppercase">Kelola Kelas</span></a>  
-                                    </li>
-                                    <li class="mr-5">
-                                        <a href="/"><span  class="type--uppercase">Dashboard</span></a>  
-                                    </li>
-                                    @elseif (Auth::user()->role === "customer") 
-                                    <li class="mr-5">
-                                        <a href="/pelajar"><span  class="type--uppercase">Home</span></a>  
-                                    </li>
-                                    <li class="dropdown dropdown--hover">
-                                        <span class="dropdown__trigger type--uppercase">Kategori Kelas</span>
-                                        <div class="dropdown__container">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-md-3 dropdown__content dropdown__content--xs">
-                                                        <div class="row justify-content-end">
-                                                            <div class="col-lg-12">
-                                                                <ul class="menu-vertical">
-                                                                    <li>
-                                                                        <a href="/pelajar/kategori-kelas-pemrograman">
-                                                                            <h6 class="type--uppercase">Kelas Pemrograman</h6>
-                                                                        </a>
-                                                                    </li>
-                                                                    <li>
-                                                                        <a href="#">
-                                                                            <h6 class="type--uppercase">Kelas Multimedia</h6>
-                                                                        </a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                            <!--end of col-->
-                                                        </div>
-                                                        <!--end of row-->
-                                                    </div>
-                                                    <!--end dropdown content-->
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <!--end dropdown container-->
-                                    </li>
-                                    <li class="mr-5">
-                                        <a href="#"><span  class="type--uppercase">Kelas Saya</span></a>  
-                                    </li>
-                                    <li class="mr-5">
-                                        <a href="#"><span  class="type--uppercase">Keranjang</span></a>  
-                                    </li>
-                                    <li class="mr-5">
-                                        <a href="#"><span  class="type--uppercase">Transaksi</span></a>  
-                                    </li>
-                                    <li class="mr-5">
-                                        <a href="#"><span  class="type--uppercase">Dapatkan Kelas Gratis!</span></a>  
-                                    </li>
-                                    @elseif (Auth::user()->role === "admin")
-                                        {{ 'navbar admin' }} 
-                                    @endif
-                                    
-                                    
+                                    </li> 
                                 </ul>
                             </div>
                             <!--end module-->
