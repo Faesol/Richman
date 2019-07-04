@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@index');
+Route::get('/detail-kelas/{id}','HomeController@DtlKelas');
+Route::get('/programming','HomeController@KatKelasP');
+Route::get('/multimedia','HomeController@KatKelasM');
 
 Auth::routes();
 
@@ -26,10 +27,9 @@ Route::get('/pelajar', 'HomeControllerPelajar@index')->middleware('customer');
 
 //Route Pelajar
 Route::get('/pelajar/kategori-kelas-pemrograman','HomeControllerPelajar@KtkelasP')->middleware('customer');
-Route::get('/pelajar/daftar-kelas/{slug}','HomeControllerPelajar@df_kelas')->middleware('customer');
-Route::get('/kategori-kelas-multimedia','HomeControllerPelajar@get_kategori_kelas')->middleware('customer');
+Route::get('/pelajar/daftar-kelas','HomeControllerPelajar@df_kelas')->middleware('customer');
+Route::get('/kategori-kelas-multimedia','HomeControllerPelajar@DtlKelas')->middleware('customer');
 Route::get('/pelajar/detail-kelas/{id}','HomeControllerPelajar@DtKelas')->middleware('customer');
-Route::post('/pelajar/metode-transaksi/{id}','HomeControllerPelajar@Mt_kelas')->middleware('customer');
 
 //Route Pengajar
 Route::get('/tutor/course','HomeControllerPengajar@get_kelola_kelas')->middleware('agent');
