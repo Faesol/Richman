@@ -76,4 +76,11 @@ class HomeControllerPelajar extends Controller
     {
         return view('pelajar/bayar_kelas');
     }
+
+    public function bk_kelas($id)
+    {
+        // $idUser = Auth::user()->id;
+        $data   = Kelas_pengajar::where('id', $id)->get();
+        return view('pelajar/buka_kelas',['data' => $data]);
+    }
 }
