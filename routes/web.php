@@ -20,15 +20,18 @@ Auth::routes();
 
 Route::get('/user/activation/{token}', 'Auth\RegisterController@userActivation');
 
-//Route::get('/home', 'HomeController@index')->name('home');
+//User
 Route::get('/admin', 'HomeControllerAdmin@index')->middleware('admin');
 Route::get('/tutor', 'HomeControllerPengajar@index')->middleware('agent');
 Route::get('/pelajar', 'HomeControllerPelajar@index')->middleware('customer');
 
 //Route Pelajar
 Route::get('/pelajar/kategori-kelas-pemrograman','HomeControllerPelajar@KtkelasP')->middleware('customer');
-Route::get('/pelajar/daftar-kelas','HomeControllerPelajar@df_kelas')->middleware('customer');
-Route::get('/kategori-kelas-multimedia','HomeControllerPelajar@DtlKelas')->middleware('customer');
+Route::get('/pelajar/kelas-saya','HomeControllerPelajar@Ksaya')->middleware('customer');
+Route::get('/pelajar/daftar-kelas/{id}','HomeControllerPelajar@df_kelas')->middleware('customer');
+Route::post('/pelajar/beli-kelas/{id}','HomeControllerPelajar@bl_kelas')->middleware('customer');
+Route::get('/pelajar/bayar-kelas/{id}','HomeControllerPelajar@bl_kelas')->middleware('customer');
+Route::get('/pelajar/kategori-kelas-multimedia','HomeControllerPelajar@DtlKelas')->middleware('customer');
 Route::get('/pelajar/detail-kelas/{id}','HomeControllerPelajar@DtKelas')->middleware('customer');
 
 //Route Pengajar

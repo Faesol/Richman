@@ -67,7 +67,7 @@
                             <div class="bar__module">
                                 <ul class="menu-horizontal text-left">
                                     <li class="mr-5">
-                                        <a href="index.html"><span  class="type--uppercase">Home</span></a>  
+                                        <a href="/"><span  class="type--uppercase">Home</span></a>  
                                     </li>
                                     {{--  <li class="dropdown dropdown--hover">
                                         <span class="dropdown__trigger type--uppercase">Kelas</span>

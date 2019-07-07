@@ -8,87 +8,109 @@
     <title>Document</title>
 </head>
 <body>
-    @section('content')
-        <main class="main-container">
-      <div class="main-content">
-
-
-        <div class="card">
-          <h4 class="card-title">Dashboard Pengajar</h4>
-
-          <div class="card-body">
-            <div class="row">
-              <div class="col-md-4">
-                <div class="card card-body">
-                  <h6>
-                    <span class="text-uppercase">Total Penghasilan</span>
-                    <span class="float-right"><a class="btn btn-xs btn-primary" href="#">View</a></span>
-                  </h6>
-                  <br>
-                  <p class="fs-28 fw-100">$21,642</p>
-                  <div class="progress">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 35%; height: 4px;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="text-gray fs-12"><i class="ti-stats-down text-danger mr-1"></i> %18 decrease from last month</div>
+@section('content')
+<div class="main-container">
+            <section class="cover cover-features imagebg space--md pb-5" data-overlay="4">
+                <div class="background-image-holder">
+                    <img alt="background" src="{{asset('asset_home/img/cover/j-kelly-brito-247570-unsplash.jpg')}}">
                 </div>
-              </div>
-              <div class="col-md-4">
-                <div class="card card-body">
-                  <h6>
-                    <span class="text-uppercase">Total Kelas</span>
-                    <span class="float-right"><a class="btn btn-xs btn-primary" href="#">View</a></span>
-                  </h6>
-                  <br>
-                  <p class="fs-28 fw-100">5</p>
-                  <div class="progress">
-                    <div class="progress-bar bg-danger" role="progressbar" style="width: 35%; height: 4px;" aria-valuenow="35" aria-valuemin="0" aria-valuemax="100"></div>
-                  </div>
-                  <div class="text-gray fs-12"><i class="ti-stats-down text-danger mr-1"></i> %18 decrease from last month</div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-9 col-lg-7">
+                            <div class="typed-headline">
+                                <span class="h1 inline-block">projectX Marketing</span>
+                                <span class="h1 inline-block typed-text typed-text--cursor color--primary" data-typed-strings="words,or,sentences,to type"></span>
+                            </div>
+        
+                            <p class="lead">
+                                projectX merupakan sebuah platform kelas online yang membantu kamu memperoleh Ilmu dengan mudah dan fleksibel.
+                            </p>
+                            <a class="btn btn--primary type--uppercase" href="#">
+                                <span class="btn__text">
+                                    Gabung ke Kelas Sekarang
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <!--end of row-->
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="feature feature-2 boxed boxed--border bg--white">
+                                <i class="icon icon-Clock-Back color--primary"></i>
+                                <div class="feature__body">
+                                    <h5 class="m-0 color--primary">Fitur 1</h5>
+                                    <p>
+                                        Save time with a multitude of styled components designed to showcase your content
+                                    </p>
+                                </div>
+                            </div>
+                            <!--end feature-->
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature feature-2 boxed boxed--border bg--white">
+                                <i class="icon icon-Duplicate-Window color--primary"></i>
+                                <div class="feature__body">
+                                    <h5 class="m-0 color--primary">Fitur 2</h5>
+                                    <p>
+                                        Construct mockups or production-ready pages in-browser with Variant Page Builder
+                                    </p>
+                                </div>
+                            </div>
+                            <!--end feature-->
+                        </div>
+                        <div class="col-md-4">
+                            <div class="feature feature-2 boxed boxed--border bg--white">
+                                <i class="icon icon-Life-Jacket color--primary"></i>
+                                <div class="feature__body">
+                                    <h5 class="m-0 color--primary">Fitur 3</h5>
+                                    <p>
+                                        Take comfort in 6 months included support with a dedicated support forum
+                                    </p>
+                                </div>
+                            </div>
+                            <!--end feature-->
+                        </div>
+                    </div>
+                    <!--end of row-->
                 </div>
-              </div>
-            </div>
-          </div>
+                <!--end of container-->
+            </section>
+            <section class=" ">
+                <div class="container">
+                    <h3 class="type--bold">Kelas Terbaru</h3>
+                    <div class="row">
+                        @foreach($data as $data)
+                        <div class="col-md-3">
+                            <div class="feature feature-1">
+                                <a href="/pelajar/detail-kelas/{{$data->IDurl_slug}}">
+                                    <img alt="Image" src="{{ URL('/images/'.$data->file_foto) }}">
+                                </a>
+                                <div class="feature__body boxed boxed--border p-3">
+                                    <a href="/pelajar/detail-kelas/{{$data->IDurl_slug}}">
+                                        <h5>{{$data->nama_kelas}}</h5>
+                                    </a>
+                                    <p>
+                                        {{$data->diskripsi}}
+                                    </p>
+                                    <a href="/pelajar/detail-kelas/{{$data->IDurl_slug}}" class="btn btn--sm btn--primary mt-2 p-1 pl-3 pr-3">
+                                        <span class="btn__text">
+                                            Beli Sekarang
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                            <!--end feature-->
+                        </div>
+                        @endforeach
+                    </div>
+                    <!--end of row-->
+                </div>
+                <!--end of container-->
+            </section>
         </div>
-
-
-      </div><!--/.main-content -->
-
-
-      <!-- Footer -->
-      <footer class="site-footer">
-        <div class="row">
-          <div class="col-md-6">
-            <p class="text-center text-md-left">Copyright © 2019 <a href="http://thetheme.io/theadmin">TheAdmin</a>. All rights reserved.</p>
-          </div>
-
-          <div class="col-md-6">
-            <ul class="nav nav-primary nav-dotted nav-dot-separated justify-content-center justify-content-md-end">
-              <li class="nav-item">
-                <a class="nav-link" href="../help/articles.html">Documentation</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="../help/faq.html">FAQ</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="https://themeforest.net/item/theadmin-responsive-bootstrap-4-admin-dashboard-webapp-template/20475359?license=regular&amp;open_purchase_for_item_id=20475359&amp;purchasable=source&amp;ref=thethemeio">Purchase Now</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </footer>
-      <!-- END Footer -->
-
-    </main>
-    <!-- END Main container -->
-
-
-
-    <!-- Global quickview -->
-    <div id="qv-global" class="quickview" data-url="assets/data/quickview-global.html">
-      <div class="spinner-linear">
-        <div class="line"></div>
-      </div>
-    </div>
-    @endsection
+        {{--  @include('layouts.footer')  --}}
+@endsection
 </body>
 </html>
+
+

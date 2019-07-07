@@ -29,23 +29,26 @@
                     <h3>Checkout Pendaftaran Kelas</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis quidem minus vitae itaque temporibus accusamus quo iste vero?.</p>
                     <h4>Pilih Metode Pembayaran :</h4>
-                    <form action="">
+                    <form action="/pelajar/beli-kelas/{{$data->id}}" method="POST" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                    {{ method_field('POST') }}
                         <div class="row">
+                            <input type="hidden" name="id_kelas" value="{{$data->id}}">
                             <div class="col-3">
                                 <div class="input-radio input-radio--innerlabel w-100">
-                                    <input id="radio-1" type="radio" name="radio_2" value="radio4">
+                                    <input id="radio-1" type="radio" name="methode_transaksi" value="bank">
                                     <label for="radio-1" class="py-3 w-100" style="height: auto;"><h5 class="mb-0">BANK TRANSFER</h5></label>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="input-radio input-radio--innerlabel w-100">
-                                    <input id="radio-2" type="radio" name="radio_2" value="radio4">
+                                    <input id="radio-2" type="radio" name="methode_transaksi" value="ovo">
                                     <label for="radio-2" class="py-3 w-100" style="height: auto;"><h5 class="mb-0">OVO</h5></label>
                                 </div>
                             </div>
                             <div class="col-3">
                                 <div class="input-radio input-radio--innerlabel w-100">
-                                    <input id="radio-3" type="radio" name="radio_2" value="radio4">
+                                    <input id="radio-3" type="radio" name="methode_transaksi" value="dana">
                                     <label for="radio-3" class="py-3 w-100" style="height: auto;"><h5 class="mb-0">DANA</h5></label>
                                 </div>
                             </div>

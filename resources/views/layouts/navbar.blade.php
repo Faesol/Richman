@@ -121,7 +121,7 @@
                                         <!--end dropdown container-->
                                     </li>
                                     <li class="mr-5">
-                                        <a href="#"><span  class="type--uppercase">Kelas Saya</span></a>  
+                                        <a href="/pelajar/kelas-saya/"><span  class="type--uppercase">Kelas Saya</span></a>  
                                     </li>
                                     <li class="mr-5">
                                         <a href="#"><span  class="type--uppercase">Keranjang</span></a>  

@@ -64,7 +64,7 @@
                                     <h1>Harga asli {{$data->harga_kelas}} total diskon {{$item->total}}</h1>
                                 @endforeach
                                 <h4>Daftar Kelas Sekarang!</h4>
-                                <a class="btn btn--primary" href="/pelajar/daftar-kelas">
+                                <a class="btn btn--primary" href="/pelajar/daftar-kelas/{{$data->id}}">
                                     <span class="btn__text">
                                        DAFTAR SEKARANG!
                                     </span>
