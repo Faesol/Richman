@@ -92,7 +92,7 @@
             </section>
             <section class=" ">
                 <div class="container">
-                    <h3 class="type--bold">Kelas Terbaru</h3>
+                    <h3 class="type--bold">Kelas Terbarui</h3>
                     <div class="row">
                         <div class="col-md-3">
                             <div class="feature feature-1">

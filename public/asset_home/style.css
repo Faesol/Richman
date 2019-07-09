@@ -4,13 +4,22 @@
 }
 .list-topik li {
     list-style: none;
-    padding: 10px 15px;
+    padding: 0px 15px;
     border: 1px solid rgba(0,0,0,0.1);
     margin: 10px 0;
     border-radius: 4px;
+    transition: all .3s linear;
+}
+.list-topik li:hover {
+    border: 1px solid rgba(0,0,0,0.3);
 }
 .list-topik li a {
-    padding: 10px;
+    padding: 15px;
+    width: 90%;
+    display: inline-block;
+}
+.list-topik li:hover a {
+    font-weight: 600;
 }
 .list-topik .sub-topik {
     width: 95%;

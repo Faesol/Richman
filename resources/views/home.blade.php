@@ -1,15 +1,7 @@
-@extends('layouts.navbarhome')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
+@extends('layouts.base-app')
 @section('content')
-<div class="main-container">
+<main class="py-1">
+    <div class="main-container">
             <section class="cover cover-features imagebg space--md pb-5" data-overlay="4">
                 <div class="background-image-holder">
                     <img alt="background" src="{{asset('asset_home/img/cover/j-kelly-brito-247570-unsplash.jpg')}}">
@@ -77,7 +69,7 @@
             </section>
             <section class=" ">
                 <div class="container">
-                    <h3 class="type--bold">Kelas Terbaru</h3>
+                    <h3 class="type--bold">Kelas Terbaruaa</h3>
                     <div class="row">
                         @foreach($data as $data)
                         <div class="col-md-3">
@@ -108,9 +100,7 @@
                 <!--end of container-->
             </section>
         </div>
-        {{--  @include('layouts.footer')  --}}
+        
 @endsection
-</body>
-</html>
 
 
