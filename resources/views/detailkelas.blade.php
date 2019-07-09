@@ -22,6 +22,7 @@
 </head>
 <body>
     @section('content')
+    
     <section class="main-container pt-0">
             <section class="text-center height-30 mb-0 bg--secondary">
                 <div class="container pos-vertical-center">

@@ -1,34 +1,31 @@
 @extends('layouts.navbar')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site Description Here">
-    <link href="{{asset ('asset_home/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{asset ('asset_home/css/stack-interface.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{asset ('asset_home/css/socicon.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <!-- <link href="{{asset ('assets_home/css/lightbox.min.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{asset ('asset_home/css/flickity.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{asset ('asset_home/css/jquery.steps.css')}}" rel="stylesheet" type="text/css" media="all" /> -->
-    <link href="{{asset ('asset_home/css/iconsmind.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{asset ('asset_home/css/theme-red.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{asset ('asset_home/css/custom.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body>
 @section('content')
-<div class="container mb-5">
-        <section>
-            <h1>Tanda bukti pembayaran/Informasi pembayaran</h1>
-            <p>paling lambat pembayaran 3 hari setelah pembelian</p>
-        </section>
-        
-    </div>      
+<div class="mb-5">
+    <section class="imagebg image--light cover cover-blocks bg--secondary ">
+        <div class="background-image-holder hidden-xs" style="background: url(&quot;{{ URL('/asset_home/img/promo-1.jpg') }}&quot;); opacity: 1;">
+            <img alt="background" src="{{ URL('/asset_home/img/promo-1.jpg') }}">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-5 ">
+                    <div>
+                        <h1>Terima Kasih</h1>
+                        <p class="lead">
+                            Lakukan Pembayaran sesuai metode yang telah dipilih dan upload foto bukti pembayaran di halaman <a href="#">bayar kelas sekarang!</a> 
+                        </p>
+                        <hr class="short">
+                        <p>
+
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
+    
+</div>      
 @endsection
     <script src="{{asset ('asset_home/js/jquery-3.1.1.min.js')}}"></script>
     <script src="{{asset ('asset_home/js/flickity.min.js')}}"></script>

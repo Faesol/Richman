@@ -83,7 +83,7 @@
                         <div class="col-md-3">
                             <div class="feature feature-1">
                                 <a href="/pelajar/detail-kelas/{{$data->IDurl_slug}}">
-                                    <img alt="Image" src="{{ URL('/images/'.$data->file_foto) }}">
+                                    <img alt="Image" src="{{ URL('/images/'.$data->file_foto) }}" style="height:190px;">
                                 </a>
                                 <div class="feature__body boxed boxed--border p-3">
                                     <a href="/pelajar/detail-kelas/{{$data->IDurl_slug}}">

@@ -1,0 +1,18 @@
+
+.list-topik {
+
+}
+.list-topik li {
+    list-style: none;
+    padding: 10px 15px;
+    border: 1px solid rgba(0,0,0,0.1);
+    margin: 10px 0;
+    border-radius: 4px;
+}
+.list-topik li a {
+    padding: 10px;
+}
+.list-topik .sub-topik {
+    width: 95%;
+    margin-left: auto;
+}

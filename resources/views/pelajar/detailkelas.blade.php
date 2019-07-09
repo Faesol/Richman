@@ -22,28 +22,33 @@
 </head>
 <body>
     @section('content')
+    <section class="imagebg image--light cover cover-blocks bg--secondary ">
+        <div class="background-image-holder hidden-xs" style="background: url(&quot;{{ URL('/asset_home/img/promo-1.jpg') }}&quot;); opacity: 1;">
+            <img alt="background" src="{{ URL('/asset_home/img/promo-1.jpg') }}">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-5 mx-auto">
+                    <div class="text-center">
+                        <h2>{{$data->nama_kelas}}</h2>
+                        <p class="lead m-0 p-0" style="font-size: 30px">
+                            <i class="material-icons color--primary m-0">star</i>
+                            <i class="material-icons color--primary m-0">star</i>
+                            <i class="material-icons color--primary m-0">star</i>
+                            <i class="material-icons color--primary m-0">star</i>
+                            <i class="material-icons color--primary m-0">star</i>
+                        </p>
+                        <p class="lead">
+                            <strong>8328</strong> Murid Sudah Bergabung 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
     <section class="main-container pt-0">
-            <section class="text-center height-30 mb-0 bg--secondary">
-                <div class="container pos-vertical-center">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <h2>{{$data->nama_kelas}}</h2>
-                            <p class="lead m-0 p-0" style="font-size: 30px">
-                                <i class="material-icons color--primary m-0">star</i>
-                                <i class="material-icons color--primary m-0">star</i>
-                                <i class="material-icons color--primary m-0">star</i>
-                                <i class="material-icons color--primary m-0">star</i>
-                                <i class="material-icons color--primary m-0">star</i>
-                            </p>
-                            <p class="lead">
-                                <strong>8328</strong> Murid Sudah Bergabung 
-                            </p>
-                            </div>
-                        </div>
-                        <!--end of row-->
-                        </div>
-                <!--end of container-->
-            </section>
             <div class="container">                
                 <section class="switchable feature-large pt-0">
                 <div class="container">
@@ -53,7 +58,7 @@
                         </div>
                         <div class="col-md-8 col-lg-8">
                             <div class="mt--1">
-                                <h3>Deskripsi Kelas (WYSIWYG)</h3>
+                                <h3>Deskripsi Kelas</h3>
                                 <p>
                                     {{$data->diskripsi}}
                                 </p>
@@ -78,6 +83,10 @@
                                 </a>
                             </div>
                             <h4>Materi Kelas</h4>
+                            <ul class="list-topik">
+                                <li><a href="#">1. Intro</a></li>
+                                <li class="sub-topik"><a href="#">1. Intro</a></li>
+                            </ul>
                             <ul class="accordion accordion-1" style="min-height: 100.2px;">
                                 <li class="">
                                     <div class="accordion__title">

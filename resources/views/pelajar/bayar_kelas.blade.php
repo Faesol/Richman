@@ -24,7 +24,7 @@
 @section('content')
 <div class="container mb-5">
         <section>
-            <h1>Tanda bukti pembayaran/Informasi pembayaran</h1>
+            <h1>Terima Kasih telah melakukan pembelian</h1>
             <p>paling lambat pembayaran 3 hari setelah pembelian</p>
         </section>
         
