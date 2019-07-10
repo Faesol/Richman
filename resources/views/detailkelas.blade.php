@@ -44,13 +44,15 @@
                                 @foreach ($hasil_diskon as $item)
                                     <h1>Harga asli {{$data->harga_kelas}} total diskon {{$item->total}}</h1>
                                 @endforeach
-                                <h4>Daftar Kelas Sekarang!</h4>
-                                <a class="btn btn--primary" href="/pelajar/daftar-kelas">
-                                    <span class="btn__text">
-                                       DAFTAR SEKARANG!
-                                    </span>
-                                </a>
-                                <h6 class="m-0">Atau</h6>
+                                @if ($cektransaksi == "[]")
+                                    <h4>Daftar Kelas Sekarang!</h4>
+                                    <a class="btn btn--primary" href="/pelajar/daftar-kelas/{{$data->id}}">
+                                        <span class="btn__text">
+                                        DAFTAR SEKARANG!
+                                        </span>
+                                    </a>
+                                    <h6 class="m-0">Atau</h6>
+                                @endif
                                 <h4 class="mt-0 pt-0 pb-0 mb-3">Pertanyaan Mengenai Kelas</h4>
                                 <a class="btn btn--secondary" href="#">
                                     <span class="btn__text">

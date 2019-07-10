@@ -6,6 +6,10 @@ use Illuminate\Http\Request;
 
 use App\Kelas_pengajar;
 
+use Auth;
+
+use App\Transaksi;
+
 use DB;
 
 class HomeController extends Controller
@@ -35,9 +39,22 @@ class HomeController extends Controller
     {
         $data = Kelas_pengajar::where('IDurl_slug',$slug)->first();
         $hasil_diskon = DB::table('hasil_diskon')->where('IDurl_slug',  $slug)->get();
-        //dd($hasil_diskon);
-        return view('detailkelas',['data' => $data, 
-                                            'hasil_diskon' => $hasil_diskon]);
+        $id_kelas = Kelas_pengajar::where('IDurl_slug',$slug)->first()->id;
+        $cektransaksi = null;
+        if (Auth::guest()){
+            $cektransaksi = "[]";
+        }
+        else {
+            $idUser = Auth::user()->id;
+            $cektransaksi = Transaksi::where([
+                 ['id_user', '=', $idUser],
+                 ['id_kelas', '=', $id_kelas]])->get();
+        }
+        
+        return view('/detailkelas',['data' => $data, 
+                                            'hasil_diskon' => $hasil_diskon,
+                                            'cektransaksi' => $cektransaksi
+                                        ]);    
     }
     public function KatKelasP()
     {

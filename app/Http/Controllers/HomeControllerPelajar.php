@@ -41,9 +41,16 @@ class HomeControllerPelajar extends Controller
     {
         $data = Kelas_pengajar::where('IDurl_slug',$slug)->first();
         $hasil_diskon = DB::table('hasil_diskon')->where('IDurl_slug',  $slug)->get();
-        //dd($hasil_diskon);
+        $id_kelas = Kelas_pengajar::where('IDurl_slug',$slug)->first()->id;
+        $idUser = Auth::user()->id;
+         $cektransaksi = Transaksi::where([
+             ['id_user', '=', $idUser],
+             ['id_kelas', '=', $id_kelas]])->get();
+        //dd($cektransaksi);
         return view('/pelajar/detailkelas',['data' => $data, 
-                                            'hasil_diskon' => $hasil_diskon]);
+                                            'hasil_diskon' => $hasil_diskon,
+                                            'cektransaksi' => $cektransaksi
+                                        ]);
     }
     public function df_kelas($id)
     {
