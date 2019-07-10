@@ -46,7 +46,7 @@
                             <div class="bar__module">
                                 <ul class="menu-horizontal text-left">
                                     @if ( Auth::user()->role  === "agent")
-                                        <li class="mr-5">
+                                    <li class="mr-5">
                                         <a href="/"><span  class="type--uppercase">Home</span></a>  
                                     </li>
                                     <li class="dropdown dropdown--hover">

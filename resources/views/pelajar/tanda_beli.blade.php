@@ -14,8 +14,11 @@
                             Lakukan Pembayaran sesuai metode yang telah dipilih dan upload foto bukti pembayaran di halaman <a href="#">bayar kelas sekarang!</a> 
                         </p>
                         <hr class="short">
-                        <p>
-
+                        <p class="lead">
+                            BCA : 3170504304 a/n Kevin EA <br>
+                            OVO : 089515477777 a/n Kevin EA <br>
+                            DANA : 089515477777 a/n Kevin EA <br>
+                            Batas pembayaran 3 hari setelah checkout
                         </p>
                     </div>
                 </div>

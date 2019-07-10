@@ -45,9 +45,8 @@
                         <div class="col-lg-9 order-lg-1">
                             <div class="bar__module">
                                 <ul class="menu-horizontal text-left">
-                                    {{--  @if ( Auth::user()->role  === "agent")  --}}
-                                        <li class="mr-5">
-                                        <a href="/"><span  class="type--uppercase">Home</span></a>  
+                                    <li class="mr-5">
+                                        <a href="/"><span  class="type--uppercase">HomeHAHA</span></a>  
                                     </li>
                                     <li class="dropdown dropdown--hover">
                                         <span class="dropdown__trigger type--uppercase">Kelas</span>
@@ -80,6 +79,11 @@
                                         </div>
                                         <!--end dropdown container-->
                                     </li> 
+                                    if (Auth::user()->role === "customer") 
+                                    <li>
+                                        <a href="">HAHA</a>
+                                    </li>
+                                    @endif
                                 </ul>
                             </div>
                             <!--end module-->

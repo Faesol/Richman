@@ -34,6 +34,7 @@ Route::get('/pelajar/bayar-kelas/{id}','HomeControllerPelajar@byr_kelas')->middl
 Route::get('/pelajar/buka-kelas/{id}','HomeControllerPelajar@bk_kelas')->middleware('customer');
 Route::get('/pelajar/kategori-kelas-multimedia','HomeControllerPelajar@DtlKelas')->middleware('customer');
 Route::get('/pelajar/detail-kelas/{id}','HomeControllerPelajar@DtKelas')->middleware('customer');
+Route::get('/kelas/{id}','HomeControllerPelajar@DtKelas')->middleware('customer');
 
 //Route Pengajar
 Route::get('/tutor/course','HomeControllerPengajar@get_kelola_kelas')->middleware('agent');

@@ -45,11 +45,10 @@
                         <div class="col-lg-9 order-lg-1">
                             <div class="bar__module">
                                 <ul class="menu-horizontal text-left">
-                                    {{--  @if ( Auth::user()->role  === "agent")  --}}
-                                        <li class="mr-5">
+                                    <li class="mr-4">
                                         <a href="/"><span  class="type--uppercase">Home</span></a>  
                                     </li>
-                                    <li class="dropdown dropdown--hover">
+                                    <li class="dropdown dropdown--hover mr-4">
                                         <span class="dropdown__trigger type--uppercase">Kelas</span>
                                         <div class="dropdown__container">
                                             <div class="container">
@@ -80,6 +79,27 @@
                                         </div>
                                         <!--end dropdown container-->
                                     </li> 
+                                    @guest
+                                    @else
+                                    @if (Auth::user()->role === "customer") 
+                                    <li class="mr-4">
+                                        <a href="/pelajar/kelas-saya/"><span  class="type--uppercase">Kelas Saya</span></a>  
+                                    </li>
+                                    <li class="mr-4">
+                                        <a href="#"><span  class="type--uppercase">Keranjang</span></a>  
+                                    </li>
+                                    <li class="mr-4">
+                                        <a href="#"><span  class="type--uppercase">Transaksi</span></a>  
+                                    </li>
+                                    @elseif ( Auth::user()->role  === "agent")
+                                    <li class="mr-4">
+                                        <a href="/pengajar/kelola-kelas"><span  class="type--uppercase">Kelola Kelas</span></a>  
+                                    </li>
+                                    <li class="mr-4">
+                                        <a href="/tutor"><span  class="type--uppercase">Dashboard</span></a>  
+                                    </li>
+                                    @endif
+                                    @endguest
                                 </ul>
                             </div>
                             <!--end module-->
