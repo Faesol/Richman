@@ -98,6 +98,14 @@ class HomeControllerPelajar extends Controller
         $id_kelas = Kelas_pengajar::where('id',$id)->first()->id;
         $topik   = Topik_pengajar::where('id_kelas' ,'=', $id_kelas)->get();
         return view('pelajar/buka_kelas',['data' => $data,
-                                        'topik' => $topik]);
+                                        'topik' => $topik,
+                                        'id_kelas' => $id_kelas]);
+    }
+
+    public function bt_topik($idk, $idt)
+    {
+        $data   = Topik_pengajar::where([['id_kelas','=',$idk],
+                                        ['id', '=', $idt]])->get();
+        return view('pelajar/buka_topik',['data' => $data]);
     }
 }

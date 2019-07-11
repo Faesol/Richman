@@ -77,12 +77,13 @@
                                     </span>
                                 </a>
                             </div>
-                            <h4>Materi Kelas</h4>
-                            <ul class="list-topik">
-                                @foreach ($topik as $item)
-                                    <li><a href="/buka-topik/{{$id_kelas}}/{{$item->id}}">{{$item->judul_topik}}</a></li>
+                            <h4>Topik</h4>
+                            <video width="400px" height="350px" controls>
+                                @foreach ($data as $item)
+                                    <source src="{{URL::asset("/file_video_topik/$item->file_video")}}" type="video/mp4">
+                                    <source src="mov_bbb.ogg" type="video/ogg">
                                 @endforeach
-                            </ul>
+                            </video>
                 
                             <h4>Pengajar</h4>
                             <div class="testimonial row">

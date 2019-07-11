@@ -35,6 +35,7 @@ Route::get('/buka-kelas/{id}','HomeControllerPelajar@bk_kelas')->middleware('cus
 Route::get('/pelajar/kategori-kelas-multimedia','HomeControllerPelajar@DtlKelas')->middleware('customer');
 Route::get('/kelas/{id}','HomeControllerPelajar@DtKelas')->middleware('customer');
 Route::get('/kelas/{id}','HomeControllerPelajar@DtKelas')->middleware('customer');
+Route::get('/buka-topik/{idk}/{idt}','HomeControllerPelajar@bt_topik')->middleware('customer');
 
 //Route Pengajar
 Route::get('/tutor/course','HomeControllerPengajar@get_kelola_kelas')->middleware('agent');
