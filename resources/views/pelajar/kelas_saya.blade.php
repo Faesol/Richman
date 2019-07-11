@@ -38,9 +38,9 @@
                         <td>{{$item->kelas->harga_kelas}}</td>
                         <td>{{$item->methode_transaksi}}</td>
                         @if( $item->status == 0)
-                            <td><a href="/pelajar/bayar-kelas/{{$item->id_kelas}}" class="btn btn-warning">Bayar Kelas</a></td> 
+                            <td><a href="/bayar-kelas/{{$item->id_kelas}}" class="btn btn-warning">Bayar Kelas</a></td> 
                         @else
-                            <td><a href="/pelajar/buka-kelas/{{$item->id_kelas}}" class="btn btn-success">Open Your Class</a></td>
+                            <td><a href="/buka-kelas/{{$item->id_kelas}}" class="btn btn-success">Open Your Class</a></td>
                         @endif
                 </tr>
                 @endforeach

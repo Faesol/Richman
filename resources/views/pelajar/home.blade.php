@@ -82,17 +82,17 @@
                         @foreach($data as $data)
                         <div class="col-md-3">
                             <div class="feature feature-1">
-                                <a href="/pelajar/detail-kelas/{{$data->IDurl_slug}}">
+                                <a href="/kelas/{{$data->id}}">
                                     <img alt="Image" src="{{ URL('/images/'.$data->file_foto) }}" style="height:190px;">
                                 </a>
                                 <div class="feature__body boxed boxed--border p-3">
-                                    <a href="/pelajar/detail-kelas/{{$data->IDurl_slug}}">
+                                    <a href="/kelas/{{$data->id}}">
                                         <h5>{{$data->nama_kelas}}</h5>
                                     </a>
                                     <p>
                                         {{$data->diskripsi}}
                                     </p>
-                                    <a href="/pelajar/detail-kelas/{{$data->IDurl_slug}}" class="btn btn--sm btn--primary mt-2 p-1 pl-3 pr-3">
+                                    <a href="/kelas/{{$data->id}}" class="btn btn--sm btn--primary mt-2 p-1 pl-3 pr-3">
                                         <span class="btn__text">
                                             Beli Sekarang
                                         </span>

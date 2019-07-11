@@ -78,36 +78,10 @@
                                 </a>
                             </div>
                             <h4>Materi Kelas</h4>
-                            <ul class="accordion accordion-1" style="min-height: 100.2px;">
-                                <li class="">
-                                    <div class="accordion__title">
-                                        <span class="h5 m-0">1. Intro</span>
-                                    </div>
-                                    <div class="accordion__content">
-                                        <ul style="width: 100%;">
-                                            <li class="m-1 p-2 h5">1.1 Introduction</li>
-                                            <li class="m-1 p-2 h5">1.2 Siap2 File</li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="">
-                                    <div class="accordion__title">
-                                        <span class="h5 m-0">2. HTML</span>
-                                    </div>
-                                    <div class="accordion__content">
-                                        <ul style="width: 100%;">
-                                            <li class="m-1 p-2 h5">2.1 Introduction</li>
-                                            <li class="m-1 p-2 h5">2.2 Siap2 File</li>
-                                        </ul>
-                                    </div>
-                                </li>
-                                <li class="">
-                                    <div class="accordion__title">
-                                        <span class="h5 m-0">3. Penutup</span>
-                                    </div>
-                                    <div class="accordion__content">
-                                    </div>
-                                </li>
+                            <ul class="list-topik">
+                                @foreach ($topik as $item)
+                                    <li><a href="/buka-topik/{{$item->id}}">{{$item->judul_topik}}</a></li>
+                                @endforeach
                             </ul>
                 
                             <h4>Pengajar</h4>

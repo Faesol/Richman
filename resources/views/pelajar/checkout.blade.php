@@ -29,7 +29,7 @@
                     <h3>Checkout Pendaftaran Kelas</h3>
                     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis quidem minus vitae itaque temporibus accusamus quo iste vero?.</p>
                     <h4>Pilih Metode Pembayaran :</h4>
-                    <form action="/pelajar/beli-kelas/{{$data->id}}" method="POST" enctype="multipart/form-data">
+                    <form action="/beli-kelas/{{$data->id}}" method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     {{ method_field('POST') }}
                         <div class="row">
@@ -75,7 +75,25 @@
                                 <span class="h4 mb-0">Kelas:</span>
                             </div>
                             <div class="col-8 text-right">
-                                <span class="h4 mb-0"><strong>Belajar HTML</strong></span>
+                                <span class="h4 mb-0"><strong>{{$data->nama_kelas}}</strong></span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-4">
+                                <span class="h4 mb-0">Harga:</span>
+                            </div>
+                            <div class="col-8 text-right">
+                                <span class="h4 mb-0"><strong>{{$data->harga_kelas}}</strong></span>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-4">
+                                <span class="h4 mb-0">Diskon:</span>
+                            </div>
+                            <div class="col-8 text-right">
+                                <span class="h4 mb-0"><strong>{{$data->diskon_harga}} %</strong></span>
                             </div>
                         </div>
                         <hr>
@@ -84,7 +102,9 @@
                                 <span class="h4 mb-0">Total:</span>
                             </div>
                             <div class="col-8 text-right">
-                                <span class="h4 mb-0"><strong>Rp. 1,028.98</strong></span>
+                                @foreach ($diskon as $item)
+                                    <span class="h4 mb-0"><strong>Rp. {{$item->total}}</strong></span>
+                                @endforeach
                             </div>
                         </div>
                     </div>

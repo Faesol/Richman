@@ -70,7 +70,7 @@
                                 @endforeach
                                 @if ($cektransaksi == "[]")
                                     <h4>Daftar Kelas Sekarang!</h4>
-                                    <a class="btn btn--primary" href="/pelajar/daftar-kelas/{{$data->id}}">
+                                    <a class="btn btn--primary" href="/daftar-kelas/{{$data->id}}">
                                         <span class="btn__text">
                                         DAFTAR SEKARANG!
                                         </span>
@@ -86,12 +86,9 @@
                             </div>
                             <h4>Materi Kelas</h4>
                             <ul class="list-topik">
-                                <li><a href="#">1. Intro</a></li>
-                                <li class="sub-topik"><a href="#">1.1 Intro</a></li>
-                                <li><a href="#">2. Bab 1</a></li>
-                                <li class="sub-topik"><a href="#">2.1 Intro</a></li>
-                                <li class="sub-topik"><a href="#">2.2 Intro</a></li>
-                                <li class="sub-topik"><a href="#">2.3 Intro</a></li>
+                                @foreach ($topik as $item)
+                                    <li><a href="#">{{$item->judul_topik}}</a></li>
+                                @endforeach
                             </ul>
                 
                             <h4>Pengajar</h4>

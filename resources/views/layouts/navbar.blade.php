@@ -81,7 +81,7 @@
                                         <!--end dropdown container-->
                                     </li>
                                     <li class="mr-5">
-                                        <a href="/pengajar/kelola-kelas"><span  class="type--uppercase">Kelola Kelas</span></a>  
+                                        <a href="/kelola-kelas"><span  class="type--uppercase">Kelola Kelas</span></a>  
                                     </li>
                                     <li class="mr-5">
                                         <a href="/"><span  class="type--uppercase">Dashboard</span></a>  
@@ -122,7 +122,7 @@
                                         <!--end dropdown container-->
                                     </li>
                                     <li class="mr-5">
-                                        <a href="/pelajar/kelas-saya/"><span  class="type--uppercase">Kelas Saya</span></a>  
+                                        <a href="/kelas-saya"><span  class="type--uppercase">Kelas Saya</span></a>  
                                     </li>
                                     <li class="mr-5">
                                         <a href="#"><span  class="type--uppercase">Keranjang</span></a>  

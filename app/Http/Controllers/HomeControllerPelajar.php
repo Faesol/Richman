@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Kelas_pengajar;
 use App\Transaksi;
+use App\Topik_pengajar;
 use App\User;
 use Auth;
 
@@ -37,25 +38,31 @@ class HomeControllerPelajar extends Controller
         //dd($data);
         return view('/pelajar/kategorikelas',['data' => $data]);
     }
-    public function DtKelas($slug)
+    public function DtKelas($id)
     {
-        $data = Kelas_pengajar::where('IDurl_slug',$slug)->first();
-        $hasil_diskon = DB::table('hasil_diskon')->where('IDurl_slug',  $slug)->get();
-        $id_kelas = Kelas_pengajar::where('IDurl_slug',$slug)->first()->id;
+        $data = Kelas_pengajar::where('id',$id)->first();
+        $hasil_diskon = DB::table('hasil_diskon')->where('id',  $id)->get();
+        $id_kelas = Kelas_pengajar::where('id',$id)->first()->id;
+        $topik   = Topik_pengajar::where('id_kelas' ,'=', $id_kelas)->get();
+        //dd($topik);
         $idUser = Auth::user()->id;
-         $cektransaksi = Transaksi::where([
+        $cektransaksi = Transaksi::where([
              ['id_user', '=', $idUser],
              ['id_kelas', '=', $id_kelas]])->get();
         //dd($cektransaksi);
         return view('/pelajar/detailkelas',['data' => $data, 
                                             'hasil_diskon' => $hasil_diskon,
-                                            'cektransaksi' => $cektransaksi
+                                            'cektransaksi' => $cektransaksi,
+                                            'topik'        => $topik
                                         ]);
     }
     public function df_kelas($id)
     {
         $data = Kelas_Pengajar::where('id', $id)->first();
-        return view('pelajar/checkout', ['data' => $data]);
+        $diskon = $hasil_diskon = DB::table('hasil_diskon')->where('id',  $id)->get();
+        //dd($diskon);
+        return view('pelajar/checkout', ['data' => $data,
+                                        'diskon' => $diskon]);
     }
 
     public function bl_kelas(Request $reques, $id){
@@ -88,6 +95,9 @@ class HomeControllerPelajar extends Controller
     {
         // $idUser = Auth::user()->id;
         $data   = Kelas_pengajar::where('id', $id)->get();
-        return view('pelajar/buka_kelas',['data' => $data]);
+        $id_kelas = Kelas_pengajar::where('id',$id)->first()->id;
+        $topik   = Topik_pengajar::where('id_kelas' ,'=', $id_kelas)->get();
+        return view('pelajar/buka_kelas',['data' => $data,
+                                        'topik' => $topik]);
     }
 }

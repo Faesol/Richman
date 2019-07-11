@@ -83,7 +83,7 @@
                                     @else
                                     @if (Auth::user()->role === "customer") 
                                     <li class="mr-4">
-                                        <a href="/pelajar/kelas-saya/"><span  class="type--uppercase">Kelas Saya</span></a>  
+                                        <a href="/kelas-saya"><span  class="type--uppercase">Kelas Saya</span></a>  
                                     </li>
                                     <li class="mr-4">
                                         <a href="#"><span  class="type--uppercase">Keranjang</span></a>  
@@ -93,7 +93,7 @@
                                     </li>
                                     @elseif ( Auth::user()->role  === "agent")
                                     <li class="mr-4">
-                                        <a href="/pengajar/kelola-kelas"><span  class="type--uppercase">Kelola Kelas</span></a>  
+                                        <a href="/kelola-kelas"><span  class="type--uppercase">Kelola Kelas</span></a>  
                                     </li>
                                     <li class="mr-4">
                                         <a href="/tutor"><span  class="type--uppercase">Dashboard</span></a>  
