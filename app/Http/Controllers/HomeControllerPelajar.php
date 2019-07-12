@@ -43,18 +43,25 @@ class HomeControllerPelajar extends Controller
         $data = Kelas_pengajar::where('id',$id)->first();
         $hasil_diskon = DB::table('hasil_diskon')->where('id',  $id)->get();
         $id_kelas = Kelas_pengajar::where('id',$id)->first()->id;
-        $topik   = Topik_pengajar::where('id_kelas' ,'=', $id_kelas)->get();
-        //dd($topik);
-        $idUser = Auth::user()->id;
-        $cektransaksi = Transaksi::where([
-             ['id_user', '=', $idUser],
-             ['id_kelas', '=', $id_kelas]])->get();
-        //dd($cektransaksi);
-        return view('/pelajar/detailkelas',['data' => $data, 
+        $cektransaksi = null;
+        // $topik   = Topik_pengajar::where([['id_kelas','=',$idk],
+        //                                 ['id', '=', $idt]])->get();
+        //                                 dd($topik);
+        if (Auth::guest()){
+            $cektransaksi = "[]";
+        }
+        else {
+            $idUser = Auth::user()->id;
+            $cektransaksi = Transaksi::where([
+                 ['id_user', '=', $idUser],
+                 ['id_kelas', '=', $id_kelas]])->get();
+        }
+        
+        return view('/detailkelas',['data' => $data, 
                                             'hasil_diskon' => $hasil_diskon,
                                             'cektransaksi' => $cektransaksi,
-                                            'topik'        => $topik
-                                        ]);
+                                            
+                                        ]);  
     }
     public function df_kelas($id)
     {
@@ -76,14 +83,13 @@ class HomeControllerPelajar extends Controller
         return view('pelajar/tanda_beli');
     }
 
-    public function Ksaya()
+    public function Tkelas()
     {
         $idUser = Auth::user()->id;
         $data   = Transaksi::where('id_user', $idUser)
                     ->with('kelas')->get();
         //dd($data);
-        return view('pelajar/kelas_saya',['data' => $data]);
-        //dd($data);
+        return view('pelajar/transaksi',['data' => $data]);
     }
 
     public function byr_kelas($id)

@@ -37,7 +37,7 @@
                             <p>
                                 {{$data->diskripsi}}
                             </p>
-                            <a href="/detail-kelas/{{$data->IDurl_slug}}" class="btn btn--sm btn--primary mt-2 p-1 pl-3 pr-3">
+                            <a href="/kelas/{{$data->id}}" class="btn btn--sm btn--primary mt-2 p-1 pl-3 pr-3">
                                 <span class="btn__text">
                                     Beli Sekarang
                                 </span>

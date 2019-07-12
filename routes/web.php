@@ -12,9 +12,10 @@
 */
 
 Route::get('/', 'HomeController@index');
-Route::get('/detail-kelas/{id}','HomeController@DtlKelas');
+Route::get('/kelas/{id}','HomeController@DtlKelas');
 Route::get('/programming','HomeController@KatKelasP');
 Route::get('/multimedia','HomeController@KatKelasM');
+Route::get('/kelas-saya','HomeController@Ksaya');
 
 Auth::routes();
 
@@ -26,14 +27,13 @@ Route::get('/tutor', 'HomeControllerPengajar@index')->middleware('agent');
 Route::get('/pelajar', 'HomeControllerPelajar@index')->middleware('customer');
 
 //Route Pelajar
-Route::get('/pelajar/kategori-kelas-pemrograman','HomeControllerPelajar@KtkelasP')->middleware('customer');
-Route::get('/kelas-saya','HomeControllerPelajar@Ksaya')->middleware('customer');
+Route::get('/kategori-kelas-pemrograman','HomeControllerPelajar@KtkelasP')->middleware('customer');
+Route::get('/transaksi','HomeControllerPelajar@Tkelas')->middleware('customer');
 Route::get('/daftar-kelas/{id}','HomeControllerPelajar@df_kelas')->middleware('customer');
 Route::post('/beli-kelas/{id}','HomeControllerPelajar@bl_kelas')->middleware('customer');
 Route::get('/bayar-kelas/{id}','HomeControllerPelajar@byr_kelas')->middleware('customer');
 Route::get('/buka-kelas/{id}','HomeControllerPelajar@bk_kelas')->middleware('customer');
 Route::get('/pelajar/kategori-kelas-multimedia','HomeControllerPelajar@DtlKelas')->middleware('customer');
-Route::get('/kelas/{id}','HomeControllerPelajar@DtKelas')->middleware('customer');
 Route::get('/kelas/{id}','HomeControllerPelajar@DtKelas')->middleware('customer');
 Route::get('/buka-topik/{idk}/{idt}','HomeControllerPelajar@bt_topik')->middleware('customer');
 

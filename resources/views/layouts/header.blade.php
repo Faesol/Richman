@@ -86,10 +86,7 @@
                                         <a href="/kelas-saya"><span  class="type--uppercase">Kelas Saya</span></a>  
                                     </li>
                                     <li class="mr-4">
-                                        <a href="#"><span  class="type--uppercase">Keranjang</span></a>  
-                                    </li>
-                                    <li class="mr-4">
-                                        <a href="#"><span  class="type--uppercase">Transaksi</span></a>  
+                                        <a href="/transaksi"><span  class="type--uppercase">Transaksi</span></a>  
                                     </li>
                                     @elseif ( Auth::user()->role  === "agent")
                                     <li class="mr-4">

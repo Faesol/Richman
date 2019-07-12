@@ -1,69 +1,57 @@
-@extends('layouts.navbar')
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Site Description Here">
-    <link href="{{asset ('asset_home/css/bootstrap.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{asset ('asset_home/css/stack-interface.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{asset ('asset_home/css/socicon.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <!-- <link href="{{asset ('assets_home/css/lightbox.min.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{asset ('asset_home/css/flickity.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{asset ('asset_home/css/jquery.steps.css')}}" rel="stylesheet" type="text/css" media="all" /> -->
-    <link href="{{asset ('asset_home/css/iconsmind.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{asset ('asset_home/css/theme-red.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <link href="{{asset ('asset_home/css/custom.css')}}" rel="stylesheet" type="text/css" media="all" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:200,300,400,400i,500,600,700%7CMerriweather:300,300i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-</head>
-<body>
+@extends('layouts.base-app')
 @section('content')
-<div class="container mb-5">
-        <section>
-            <h1>Kelas saya</h1>
-            <table>
-                <tr style="font-weight:bold">
-                    <td>Nama Kelas</td>
-                    <td>Harga Kelas</td>
-                    <td>Methode Pembayaran</td>
-                    <td>Status</td>
-                </tr>
-                @foreach ($data as $item)
-                <tr>
-                        <td>{{$item->kelas->nama_kelas}}</td>
-                        <td>{{$item->kelas->harga_kelas}}</td>
-                        <td>{{$item->methode_transaksi}}</td>
-                        @if( $item->status == 0)
-                            <td><a href="/bayar-kelas/{{$item->id_kelas}}" class="btn btn-warning">Bayar Kelas</a></td> 
-                        @else
-                            <td><a href="/buka-kelas/{{$item->id_kelas}}" class="btn btn-success">Open Your Class</a></td>
-                        @endif
-                </tr>
-                @endforeach
-            </table>
-        </section>
-        
-    </div>      
+<div class="main-container">
+    <section class="imagebg image--dark cover cover-blocks bg--secondary"  data-overlay="7">
+        <div class="background-image-holder hidden-xs" style="background: url(&quot;{{ URL('/asset_home/img/cover/j-kelly-brito-247570-unsplash.jpg') }}&quot;); opacity: 1;">
+            <img alt="background" src="{{ URL('/asset_home/img/cover/j-kelly-brito-247570-unsplash.jpg') }}">
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-lg-5 ">
+                    <div>
+                        <h1 style="text-transform: capitalize;">Kelas {kategori}</h1>
+                        <p class="lead">
+                            Temukan Kelas - tolong kasi kata-kata disini</a> 
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
+    <section class="pt-4 mt-2">
+        <div class="container">
+            <h3 class="type--bold">Kelas Terbaruaaa</h3>
+            <div class="row">
+                {{-- @foreach($data as $data) --}}
+                <div class="col-md-3">
+                    <div class="feature feature-1">
+                        <a href="">
+                            {{-- <img alt="Image" src="{{ URL('/images/'.$data->file_foto) }}" style="height:190px;"> --}}
+                        </a>
+                        <div class="feature__body boxed boxed--border p-3">
+                            <a href="">
+                                {{-- <h5>{{$data->nama_kelas}}</h5> --}}
+                            </a>
+                            <p>
+                                {{-- {{$data->diskripsi}} --}}
+                            </p>
+                            {{-- <a href="/kelas/{{$data->id}}" class="btn btn--sm btn--primary mt-2 p-1 pl-3 pr-3">
+                                <span class="btn__text">
+                                    Beli Sekarang
+                                </span>
+                            </a> --}}
+                        </div>
+                    </div>
+                    <!--end feature-->
+                </div>
+                {{-- @endforeach --}}
+            </div>
+            <!--end of row-->
+        </div>
+        <!--end of container-->
+    </section>
+</div>
 @endsection
-    <script src="{{asset ('asset_home/js/jquery-3.1.1.min.js')}}"></script>
-    <script src="{{asset ('asset_home/js/flickity.min.js')}}"></script>
-    <script src="{{asset ('asset_home/js/easypiechart.min.js')}}"></script>
-    <script src="{{asset ('asset_home/js/parallax.js')}}"></script>
-    <script src="{{asset ('asset_home/js/typed.min.js')}}"></script>
-    <script src="{{asset ('asset_home/js/datepicker.js')}}"></script>
-    <script src="{{asset ('asset_home/js/isotope.min.js')}}"></script>
-    <script src="{{asset ('asset_home/js/ytplayer.min.js')}}"></script>
-    <script src="{{asset ('asset_home/js/lightbox.min.js')}}"></script>
-    <script src="{{asset ('asset_home/js/granim.min.js')}}"></script>
-    <script src="{{asset ('asset_home/js/jquery.steps.min.js')}}"></script>
-    <script src="{{asset ('asset_home/js/countdown.min.js')}}"></script>
-    <script src="{{asset ('asset_home/js/twitterfetcher.min.js')}}"></script>
-    <script src="{{asset ('asset_home/js/spectragram.min.js')}}"></script>
-    <script src="{{asset ('asset_home/js/smooth-scroll.min.js')}}"></script>
-    <script src="{{asset ('asset_home/js/scripts.js')}}"></script>
-</body>
-</html>
+

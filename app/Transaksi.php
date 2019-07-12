@@ -26,7 +26,7 @@ class Transaksi extends Model
 
     public function kelas()
     {
-        return $this->hasOne('App\Kelas_pengajar', 'id','id_kelas');
+        return $this->hasOne(Kelas_pengajar::class);
     }
 
 

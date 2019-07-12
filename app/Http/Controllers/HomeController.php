@@ -68,4 +68,13 @@ class HomeController extends Controller
         //dd($data);
         return view('kelas', ['data' => $data]);
     }
+    public function Ksaya()
+    {
+        $idUser = Auth::user()->id;
+        $data   = DB::table('transaksi')
+                ->join('Kelas_pengajar', 'transaksi.id_kelas', '=', 'Kelas_pengajar.id')
+                ->where('transaksi.id_user', '=', $idUser)->get();
+        return view('kelas_saya',['data' => $data]);
+        //dd($data);
+    }
 }
