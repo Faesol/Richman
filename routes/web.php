@@ -51,3 +51,7 @@ Route::post('/tutor/pengajar_buat_topik/{slug}', 'HomeControllerPengajar@post_bu
 
 //Admin
 Route::get('/admin','HomeControllerAdmin@index')->middleware('admin');
+Route::get('/admin/transaksi','HomeControllerAdmin@transaksi')->middleware('admin');
+Route::get('/admin/transaksi/approve/{id}','HomeControllerAdmin@Tapprove')->middleware('admin');
+Route::get('/admin/transaksi/reject/{id}','HomeControllerAdmin@Treject')->middleware('admin');
+

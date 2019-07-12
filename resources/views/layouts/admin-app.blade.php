@@ -129,24 +129,24 @@
             </a>
           </li>
 
-          <li class="menu-item">
+           <li class="menu-item">
             <a class="menu-link" href="#">
               <span class="icon fa fa-university"></span>
-              <span class="title">Manajemen Kelas</span>
+              <span class="title">Master</span>
               <span class="arrow"></span>
             </a>
 
             <ul class="menu-submenu">
               <li class="menu-item">
-                <a class="menu-link" href="">
+                <a class="menu-link" href="/admin/transaksi">
                   <span class="dot"></span>
-                  <span class="title">Kelola Kelas</span>
+                  <span class="title">Data Transaksi</span>
                 </a>
               </li>
               <li class="menu-item">
                 <a class="menu-link" href="#">
                   <span class="dot"></span>
-                  <span class="title">Kelola Topik</span>
+                  <span class="title">???</span>
                 </a>
               </li>
             </ul>

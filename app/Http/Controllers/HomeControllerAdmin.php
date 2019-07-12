@@ -31,4 +31,21 @@ class HomeControllerAdmin extends Controller
     {
         return view('Admin/home');
     }
+    public function transaksi()
+    {
+        $data = Transaksi::get();
+        return view('Admin/transaksi',['data' => $data]);
+    }
+    public function Tapprove($id)
+    {
+        $aprove = Transaksi::where('status', 0)
+            ->update(['status' => "1"]);
+        return back();
+    }
+    public function Treject($id)
+    {
+        $reject = Transaksi::where('status', 1)
+            ->update(['status' => "0"]);
+        return back();
+    }
 }
