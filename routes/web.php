@@ -48,3 +48,6 @@ Route::get('/tutor/penjualan_kelas/{id}','HomeControllerPengajar@get_penjualan_k
 Route::get('/tutor/detail_kelas/{id}','HomeControllerPengajar@get_detail_kelas')->middleware('agent');
 Route::get('/tutor/buat-topik/{id}','HomeControllerPengajar@get_buat_topik')->middleware('agent');
 Route::post('/tutor/pengajar_buat_topik/{slug}', 'HomeControllerPengajar@post_buat_topik')->middleware('agent');
+
+//Admin
+Route::get('/admin','HomeControllerAdmin@index')->middleware('admin');

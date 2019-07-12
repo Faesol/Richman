@@ -68,7 +68,7 @@
                                     @endforeach
                                 @else 
                                     @foreach ($topik as $item)
-                                        <li><a href="#">{{$item->judul_topik}}</a></li>
+                                        <li><a href="/buka-topik/{{$item->id_kelas}}/{{$item->id}}">{{$item->judul_topik}}</a></li>
                                     @endforeach
                                 @endif
                             </ul>

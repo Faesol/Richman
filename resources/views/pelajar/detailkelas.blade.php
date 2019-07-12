@@ -87,7 +87,7 @@
                             <h4>Materi Kelas</h4>
                             <ul class="list-topik">
                                 @foreach ($topik as $item)
-                                    <li><a href="#">{{$item->judul_topik}}</a></li>
+                                    <li><a href="/buka-topik/{{$id_kelas}}/{{$item->id}}">{{$item->judul_topik}}</a></li>
                                 @endforeach
                             </ul>
                 

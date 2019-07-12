@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Kelas_pengajar;
+use App\Transaksi;
+use App\Topik_pengajar;
+use App\User;
+use Auth;
 
 class HomeControllerAdmin extends Controller
 {
@@ -23,6 +29,6 @@ class HomeControllerAdmin extends Controller
      */
     public function index()
     {
-        return view('home');
+        return view('Admin/home');
     }
 }

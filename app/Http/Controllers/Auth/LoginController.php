@@ -52,7 +52,8 @@ class LoginController extends Controller
             case ($role == 'agent' && $active == '1'):
                 return '/tutor';
                 break;
-            case ($role == 'admin'):
+            case ($role == 'admin'&& $active == '1'):
+                echo "halo";
                 return '/admin';
                 break;     
             default:
