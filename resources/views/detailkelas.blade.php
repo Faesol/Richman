@@ -62,9 +62,15 @@
                             </div>
                             <h4>Materi Kelas</h4>
                             <ul class="list-topik">
-                                {{-- @foreach ($topik as $item)
-                                    <li><a href="#">{{$item->judul_topik}}</a></li>
-                                @endforeach --}}
+                                @if ($cektransaksi == "[]")
+                                    @foreach ($topik as $item)
+                                        <li><a>{{$item->judul_topik}}</a></li>
+                                    @endforeach
+                                @else 
+                                    @foreach ($topik as $item)
+                                        <li><a href="#">{{$item->judul_topik}}</a></li>
+                                    @endforeach
+                                @endif
                             </ul>
                             <h4>Profil Pengajar</h4>
                             <div class="testimonial row">

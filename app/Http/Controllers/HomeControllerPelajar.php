@@ -44,9 +44,7 @@ class HomeControllerPelajar extends Controller
         $hasil_diskon = DB::table('hasil_diskon')->where('id',  $id)->get();
         $id_kelas = Kelas_pengajar::where('id',$id)->first()->id;
         $cektransaksi = null;
-        // $topik   = Topik_pengajar::where([['id_kelas','=',$idk],
-        //                                 ['id', '=', $idt]])->get();
-        //                                 dd($topik);
+        $topik   = Topik_pengajar::where('id_kelas' ,'=', $id_kelas)->get();
         if (Auth::guest()){
             $cektransaksi = "[]";
         }
@@ -60,7 +58,7 @@ class HomeControllerPelajar extends Controller
         return view('/detailkelas',['data' => $data, 
                                             'hasil_diskon' => $hasil_diskon,
                                             'cektransaksi' => $cektransaksi,
-                                            
+                                            'topik'        => $topik
                                         ]);  
     }
     public function df_kelas($id)
